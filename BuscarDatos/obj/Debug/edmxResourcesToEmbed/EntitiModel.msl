@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatosClientesModelStoreContainer" CdmEntityContainer="DatosClientesEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="IsTypeOf(DatosClientesModel.Clientes)">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidop" ColumnName="apellidop" />
+          <ScalarProperty Name="apellidom" ColumnName="apellidom" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="asesor" ColumnName="asesor" />
+          <ScalarProperty Name="fraccionamiento" ColumnName="fraccionamiento" />
+          <ScalarProperty Name="financiamiento" ColumnName="financiamiento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="ultimo_seguimiento" ColumnName="ultimo_seguimiento" />
+          <ScalarProperty Name="ver_expediente" ColumnName="ver_expediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

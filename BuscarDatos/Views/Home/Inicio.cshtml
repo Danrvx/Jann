@@ -1,0 +1,56 @@
+﻿@model BuscarDatos.Models.IndexViewModel
+
+@{ ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div>
+    <div>
+        @using (Html.BeginForm(null, null, FormMethod.Get))
+        {
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre(s)" />
+                <input id="apellidop" type="text" name="apellidop" placeholder="Apellido Paterno" />
+                <input id="apellidom" type="text" name="apellidom" placeholder="Apellido Materno" />
+                <input id="telefono" type="number" name="cel" placeholder="Teléfono o Celular" />
+                <input id="email" type="email" name="email" placeholder="Correo Electrónico" />
+                     <button type="submit" id="boton" class="btn btn-success">
+                        Buscar
+                    </button>
+                        }
+        @*<form id="BuscarCliente">
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre(s)" />
+                <input id="apellidop" type="text" name="apellidop" placeholder="Apellido Paterno" />
+                <input id="apellidom" type="text" name="apellidom" placeholder="Apellido Materno" />
+                <input id="telefono" type="" name="cel" placeholder="Teléfono o Celular" />
+                <input id="email" type="email" name="email" placeholder="Correo Electrónico" />
+
+                <button type="submit" id="boton" class="btn btn-success">
+                    Buscar
+                </button>
+            </form>*@
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model.Clientes)
+            {
+                <tr>
+                    <td>@cliente.nombre</td>
+                    <td>@cliente.apellidop</td>
+                    <td>@cliente.apellidom</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @{Html.RenderPartial("_paginador", Model);}
+</div>
+
+<script type="text/javascript" src="~/JavaScript/global.js"></script>
